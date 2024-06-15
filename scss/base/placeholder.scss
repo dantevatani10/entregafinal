@@ -1,0 +1,42 @@
+// Placeholders para estilos reutilizables
+%boton-base {
+    border: none;
+    outline: none;
+    padding: 12px;
+    color: $white-color;
+    background-color: $red-color;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  %modelo-base {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: calc(33.33% - 60px); // Inicialmente, 3 por fila
+    margin: 10px;             // Espacio uniforme
+    text-align: center;
+    font-family: 'Racing Sans One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    // Eliminamos la altura fija para permitir que se ajuste al contenido
+  
+    @media (max-width: 768px) {
+      width: calc(50% - 20px); // En móviles, 2 por fila
+    }
+    
+    @media (max-width: 480px) {
+      width: 100%;            // En móviles pequeños, 1 por fila
+    }
+  }
+  
+  %imagen-modelo {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
